@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/songs', function () {
+    return "Songs";
+});
+Route::get('/songs', function () {
+    return view('songs');
+});
+Route::get('/songs', function () {
+    $song = new Song();
+    $song->setTitle('With You');
+    return view('songs', [ 'song' => $song ]);
+});
