@@ -1,6 +1,6 @@
 <?php
 // File: practicals/Practical.php
-
+namespace practicals;
 class Practical {
     /**
      * Prints "Hello, World!"
