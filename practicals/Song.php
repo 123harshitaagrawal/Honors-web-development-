@@ -8,7 +8,7 @@ class Song {
     private $genre;
     private $tempo;
 
-    // Constructor
+    
     public function __construct($title, $artist, $genre, $tempo) {
         $this->title = $title;
         $this->artist = $artist;
@@ -16,7 +16,7 @@ class Song {
         $this->tempo = $tempo;
     }
 
-    // Getter and Setter functions for 'Title'
+    
     public function getTitle() {
         return $this->title;
     }
