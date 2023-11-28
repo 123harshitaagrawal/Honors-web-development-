@@ -105,6 +105,7 @@
 
     <main>
         <table>
+            <thead <table>
             <thead>
                 <tr>
                     <th>Serial No</th>
@@ -131,7 +132,20 @@
                 </tr>
                 <!-- Add more rows as needed -->
             </tbody>
-        </table>
+        </table>>
+                
+                                                                      
+           
+        
+        
+                                                                                                  
+              
+              
+              
+              
+              
+                                  
+             
 
         <form>
             <input type="text" placeholder="Playlist Name">
