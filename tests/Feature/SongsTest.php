@@ -1,45 +1,21 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
+namespace Tests\Feature;
 
-require_once (__DIR__ . '/../practicals/Song.php');
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
-class SongsTest extends TestCase {
+class SongsTest extends TestCase
+{
     /**
-     * Test the setTempo function sets tempo to 60
+     * A basic feature test songs.
      */
-    public function testSetTempo() {
-        $song = new Song("Example Song", "Example Artist", "Pop", 120);
-        $song->setTempo(60);
-        $this->assertEquals(60, $song->getTempo());
-    }
+    public function testSongsOk(): void
+    {
+        $response = $this->get('/songs');
 
-    /**
-     * Test the setTempo function accepts integer strings
-     */
-    public function testSetTempoAcceptsIntegerString() {
-        $song = new Song("Example Song", "Example Artist", "Pop", 120);
-        $song->setTempo("60");
-        $this->assertEquals(60, $song->getTempo());
-    }
-
-    /**
-     * Test the setTempo function rejects alphabet strings
-     */
-    public function testSetTempoRejectsAlphabetString() {
-        $this->expectException(InvalidArgumentException::class);
-        $song = new Song("Example Song", "Example Artist", "Pop", 120);
-        $song->setTempo("60 BPM");
-    }
-
-    /**
-     * Test the setTempo function rejects float values
-     */
-    public function testSetTempoRejectsFloat() {
-        $this->expectException(InvalidArgumentException::class);
-        $song = new Song("Example Song", "Example Artist", "Pop", 120);
-        $song->setTempo(60.5);
+        $response->assertStatus(200);
     }
 }
-
 ?>
