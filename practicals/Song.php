@@ -1,60 +1,87 @@
 <?php
-// File: practicals/Song.php
-
-class Song {
-    // Properties
+ namespace Practicals;
+/**
+ * Class Song
+ * Represents a song with properties like title, artist, genre, and tempo.
+ */
+class Song
+{
     private $title;
     private $artist;
     private $genre;
     private $tempo;
 
-    
-    public function __construct($title, $artist, $genre, $tempo) {
-        $this->title = $title;
-        $this->artist = $artist;
-        $this->genre = $genre;
-        $this->tempo = $tempo;
-    }
-
-    
-    public function getTitle() {
+    /**
+     * Get the title of the song.
+     * @return string
+     */
+    public function getTitle()
+    {
         return $this->title;
     }
 
-    public function setTitle($title) {
+    /**
+     * Set the title of the song.
+     * @param string $title
+     */
+    public function setTitle($title)
+    {
         $this->title = $title;
     }
 
-    // Getter and Setter functions for 'Artist'
-    public function getArtist() {
+    /**
+     * Get the artist of the song.
+     * @return string
+     */
+    public function getArtist()
+    {
         return $this->artist;
     }
 
-    public function setArtist($artist) {
+    /**
+     * Set the artist of the song.
+     * @param string $artist
+     */
+    public function setArtist($artist)
+    {
         $this->artist = $artist;
     }
 
-    // Getter and Setter functions for 'Genre'
-    public function getGenre() {
+    /**
+     * Get the genre of the song.
+     * @return string
+     */
+    public function getGenre()
+    {
         return $this->genre;
     }
 
-    public function setGenre($genre) {
+    /**
+     * Set the genre of the song.
+     * @param string $genre
+     */
+    public function setGenre($genre)
+    {
         $this->genre = $genre;
     }
 
-    // Getter and Setter functions for 'Tempo'
-    public function getTempo() {
+    /**
+     * Get the tempo of the song.
+     * @return string
+     */
+    public function getTempo()
+    {
         return $this->tempo;
     }
 
-    public function setTempo($tempo) {
+    /**
+     * Set the tempo of the song.
+     * @param string $tempo
+     */
+    public function setTempo($tempo)
+    {
         $this->tempo = $tempo;
     }
 }
 
-// Usage Example:
-// $song = new Song("Song Title", "Artist Name", "Genre", "Tempo");
-// echo $song->getTitle(); // Get title
-// $song->setTitle("New Title"); // Set title
 ?>
